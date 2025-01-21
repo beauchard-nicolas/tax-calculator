@@ -55,15 +55,6 @@ Ce projet réalisé dans le cadre d'un test technique est un calculateur d'impô
 - Tranche C (20,000-40,000£) : 20,000£ × 40% = 8,000£
 - **Impôt total annuel = 11,000£**
 
-## Guide d'Installation Détaillé
-
-### 1. Prérequis
-- PHP 8.2 ou supérieur
-- Composer
-- MySQL 8.0
-- Node.js et npm
-- Git
-
 ###  Installation
 
 1. Prérequis
