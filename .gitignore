@@ -1,0 +1,36 @@
+# Laravel
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Logs et debug
+npm-debug.log
+yarn-error.log
+.phpactor.json
+
+# IDE et éditeurs
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+*.sublime-workspace
+*.sublime-project
+
+# Cache et tests
+/.phpunit.cache
+
+# OS
+.DS_Store
+Thumbs.db
