@@ -1,3 +1,5 @@
+![Démonstration du Calculateur d'Impôts UK](demo.gif)
+
 # Calculateur d'Impôts UK
 
 ## Technologies Utilisées
