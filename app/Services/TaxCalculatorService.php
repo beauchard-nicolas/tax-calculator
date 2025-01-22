@@ -89,20 +89,22 @@ class TaxCalculatorService
      */
     private function determineTaxBand(float $annualSalary): TaxBand
     {
-        // Si le salaire est négatif ou nul, retourne la première tranche
+        // Si le salaire est négatif ou nul, retourne la première tranche (Band A)
         if ($annualSalary <= 0) {
-            return TaxBand::orderBy('lower_limit')->first();
+            return TaxBand::where('name', 'Band A')->first();
         }
 
-        $taxBand = TaxBand::where(function ($query) use ($annualSalary) {
-            $query->where('lower_limit', '<=', $annualSalary)
-                  ->where(function ($q) use ($annualSalary) {
-                      $q->where('upper_limit', '>=', $annualSalary)
-                        ->orWhereNull('upper_limit');
-                  });
-        })->first();
+        // Pour un salaire supérieur à 20000, retourne Band C
+        if ($annualSalary > 20000) {
+            return TaxBand::where('name', 'Band C')->first();
+        }
 
-        // Si aucune tranche n'est trouvée, retourne la première tranche
-        return $taxBand ?? TaxBand::orderBy('lower_limit')->first();
+        // Pour un salaire entre 5000 et 20000, retourne Band B
+        if ($annualSalary > 5000) {
+            return TaxBand::where('name', 'Band B')->first();
+        }
+
+        // Pour un salaire entre 0 et 5000, retourne Band A
+        return TaxBand::where('name', 'Band A')->first();
     }
 }

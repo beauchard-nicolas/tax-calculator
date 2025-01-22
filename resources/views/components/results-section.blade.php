@@ -6,7 +6,7 @@
         <div class="absolute top-4 right-4">
             <div class="w-6 h-6 rounded-full flex items-center justify-center text-white font-semibold text-lg font-baloo" 
                  style="background-color: {{ $result['tax_band']->color }}">
-                {{ substr($result['tax_band']->name, 0, 1) }}
+                {{ substr($result['tax_band']->name, -1) }}
             </div>
         </div>
     @endif

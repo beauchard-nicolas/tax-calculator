@@ -15,7 +15,8 @@ class TaxBandSeeder extends Seeder
                 'name' => 'Band A',
                 'lower_limit' => 0,
                 'upper_limit' => 5000,
-                'rate' => 0
+                'rate' => 0,
+                'color' => '#22c55e' // Vert
             ]);
         }
 
@@ -25,7 +26,8 @@ class TaxBandSeeder extends Seeder
                 'name' => 'Band B',
                 'lower_limit' => 5000,
                 'upper_limit' => 20000,
-                'rate' => 20
+                'rate' => 20,
+                'color' => '#f97316' // Orange
             ]);
         }
 
@@ -35,7 +37,8 @@ class TaxBandSeeder extends Seeder
                 'name' => 'Band C',
                 'lower_limit' => 20000,
                 'upper_limit' => null,
-                'rate' => 40
+                'rate' => 40,
+                'color' => '#ef4444' // Rouge
             ]);
         }
     }

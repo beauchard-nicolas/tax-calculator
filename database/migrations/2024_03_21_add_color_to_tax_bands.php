@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('color')->default('#22c55e'); // Vert par défaut
         });
 
-        // Mettre à jour les couleurs existantes
+        // Mettre à jour les couleurs avec les bonnes valeurs
         DB::table('tax_bands')->where('name', 'Band A')->update(['color' => '#22c55e']); // Vert
         DB::table('tax_bands')->where('name', 'Band B')->update(['color' => '#f97316']); // Orange
         DB::table('tax_bands')->where('name', 'Band C')->update(['color' => '#ef4444']); // Rouge
