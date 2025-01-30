@@ -76,14 +76,6 @@ class TaxCalculatorTest extends TestCase
         $this->assertEquals(5000, $calculator->calculateTax(25000)); // Troisième tranche
     }
 
-    // Tests supplémentaires pour des salaires très élevés et des valeurs limites
-    public function test_calculates_tax_for_high_salary(): void
-    {
-        // Test pour un salaire très élevé, vérifie le calcul de l'impôt
-        $result = $this->calculator->calculate(1000000);
-        // Ajoutez des assertions appropriées ici
-    }
-
     public function test_calculates_tax_for_boundary_values(): void
     {
         // Test pour les valeurs limites des tranches d'imposition
@@ -104,4 +96,4 @@ class TaxCalculatorTest extends TestCase
         $this->assertEquals(5000.80, $result2['net_annual']);
         $this->assertEquals(0.20, $result2['tax_annual']);
     }
-} 
+}
